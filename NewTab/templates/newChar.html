@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block title %}Novo Personagem{% endblock %}
+{% block content %}
+    <div style="width: 600px; margin: 30px auto;">
+        <form method="POST" class="ui form myitem">{% csrf_token %}
+            {{ form.as_table }}
+            <br>
+            <button type="submit" class="ui primary fluid button">Save</button>
+        </form>
+    </div>
+{% endblock %}
