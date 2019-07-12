@@ -1,20 +1,5 @@
 {% extends 'layout.html' %}
 {% block title %}{{ user.first_name }}{% endblock %}
 {% block content %}
-    <ul>
-    {% for char in  chars %}
-        <li class="ui list">
-            <a href="{% url 'infoChar' pk=char.pk%}">
-                <i class="right triangle icon"></i>
-                {{ char }}
-            </a>
-        </li>
-    {% endfor %}
-    <li class="ui list">
-        <a href="{% url 'newChar'%}">
-            <i class="plus icon"></i>
-            Novo personagem
-        </a>
-    </li>
-    </ul>
+    <h1>Index</h1>
 {% endblock %}
